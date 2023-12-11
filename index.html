@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<title>Memory</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8" />
+	<meta name="description" content="This is a Memory Game, built with HTML5, CSS and Javascript" />
+	<meta name="keywords" content="Memory, Game" />
+	<meta name="author" content="Tino Sabetta" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Web App -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-icon" href="assets/app-icon/app-icon.png">
+	<!-- Splash Screens -->
+	<link href="assets/splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="assets/splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+	<link href="assets/splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+	<link href="assets/splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="assets/splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="assets/splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/reset.css" media="screen" />
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" media="screen" />
+
+	<!-- Javascript -->
+	<script async src="https://cdn.splitbee.io/sb.js"></script>
+</head>
+
+<body>
+	<header>
+		<h3>Memory Game</h3>
+		<div id="restart">Restart</div>
+		<div id="time">Time: <span>00:00</span></div>
+		<div id="best">Best: <span>--:--</span></div>
+		<div id="pairs_1" class="hidden active">Player 1: <span>0</span></div>
+		<div id="pairs_2" class="hidden">Player 2: <span>0</span></div>
+	</header>
+	<div id="GameGrid">
+		<div class="card" id="1">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="2">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="3">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="4">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="5">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="6">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="7">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="8">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="9">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="10">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="11">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="12">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="13">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="14">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="15">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="16">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="17">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="18">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="19">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="20">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="21">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="22">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="23">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="24">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="25">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="26">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="27">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="28">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="29">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div class="card" id="30">
+			<div class="front cardface"></div>
+			<div class="back cardface"></div>
+		</div>
+		<div id="setup">
+			<h1>How many players want to play?</h1>
+			<div>1 Player</div>
+			<div>2 Players</div>
+		</div>
+	</div>
+
+	<footer>
+		<div>Website made by <a href="https://github.com/Tehes/">Tehes</a>. Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a><br> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+			    target="_blank">CC 3.0 BY</a></div>
+	</footer>
+	<script src="js/memory.js"></script>
+</body>
+
+</html>
